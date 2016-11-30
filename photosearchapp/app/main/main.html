@@ -1,0 +1,47 @@
+
+        <!--<color-picker ng-model="color" color-picker-format="'hsv'"
+        color-picker-alpha=" false"
+        color-picker-swatch="true"    
+        color-picker-case="'upper'"
+        color-picker-on-change="onColorChange($event, color)">
+      </color-picker>--> 
+
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+          <input class="inputSearch" type="text" ng-model="toSearch" ng-change="onColorChange()" name="">
+      </div>
+      <figure class="logotipo"><!-- logotipo -->
+        <img src="images/gtb-logo.png" width="80" height="80" alt="Invie Logotipo">
+      </figure>
+    </div>
+</nav>
+
+<div class="container">
+      <div class="row rows-found">
+        <div class="col-xs-12 col-md-4 col-md-offset-0" ng-hide="photos.length">No results.</div>
+      </div>
+      <div class="row rows-found">
+        <div class="col-xs-12 col-md-4 col-md-offset-0" ng-hide="!photos.length">About {{photos.length}} results.</div>
+      </div>
+      <div class="row results">
+          <div masonry>
+              <a href="" class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="photo in photos">
+                <img class="img-responsive image" ng-src="/main/images_gtb/{{photo.file_name}}" alt="{{photo._score}}">
+                <span class="span">File Name: {{photo.file_name}}</span>
+                <span class="span">Name: {{photo.image_description}}</span>
+                <span class="span">Artist: {{photo.artist}}</span>
+                <span class="span">Size: {{photo.file_size}}</span>
+                <span class="span">Resolution: {{photo.x_resolution}} x {{photo.y_resolution}}</span>
+                <span class="span">File Type: {{photo.file_type}}</span>
+              </a>  
+          </div>
+        </div>
+      <div class="row button-search">
+        <div class="load-more col-xs-offset-4 col-xs-4 col-md-1 col-md-offset-5" ng-hide="allResultsShown" ng-cloak>
+          <a class="btn btn-primary" ng-click="loadMore()">More...</a>
+        </div>
+      </div>
+</div>
+
