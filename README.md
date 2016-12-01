@@ -17,7 +17,7 @@ In the indexer directory run `npm install` to set up the dependencies.
 
 Then run `node index.js <path to photos>`
 
-# Part 3: 
+## Part 3: Run App 
 
 _The photosearchapp folder has a simple angular app which connects to your elasticsearch instance._
 
