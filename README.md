@@ -19,6 +19,10 @@ Then run `node index.js <path to photos>`
 
 # Part 3: 
 
-The photosearchapp folder has a simple angular app which connects to your elasticsearch instance. Be sure to change the server in `app.js` to point to your instance and to change the photo path in the `main.html file. 
+_The photosearchapp folder has a simple angular app which connects to your elasticsearch instance._
+
+Be sure to change the server in `app.js` to point to your instance and to change the photo path in the `main.html file. 
+
+Run `npm start` in this folder. 
 
 Licensing information in the LICENSE file
