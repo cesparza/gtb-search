@@ -1,7 +1,5 @@
-# photosearch
-Building a highly performant photosearch with Elasticsearch, Docker, and AngularJS
-
-Read more about this project on my [blog](http://blog.sandeepchivukula.com)
+# Photo Search
+Building a highly performant Photo search with Elasticsearch, Docker, and AngularJS
 
 # Instructions
 
@@ -21,6 +19,6 @@ Then run `node index.js <path to photos>`
 
 # Part 3: 
 
-The photosearchapp folder has a simple angular app which connects to your elasticsearch instance. Be sure to change the server in `app.js` to point to your instance and to change the photo path in the `main.html` file. 
+The photosearchapp folder has a simple angular app which connects to your elasticsearch instance. Be sure to change the server in `app.js` to point to your instance and to change the photo path in the `main.html file. 
 
 Licensing information in the LICENSE file
