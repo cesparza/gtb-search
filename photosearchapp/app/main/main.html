@@ -28,13 +28,12 @@
       <div class="row results">
           <div masonry>
               <a href="" class="col-lg-3 col-md-4 col-xs-6 thumb" ng-repeat="photo in photos">
-                <img class="img-responsive image" ng-src="/main/images_gtb/{{photo.file_name}}" alt="{{photo._score}}">
+                <img class="img-responsive image" ng-src="/images_gtb/{{photo.file_name}}" alt="{{photo._score}}">
                 <span class="span">File Name: {{photo.file_name}}</span>
                 <span class="span">Name: {{photo.image_description}}</span>
                 <span class="span">Artist: {{photo.artist}}</span>
                 <span class="span">Size: {{photo.file_size}}</span>
                 <span class="span">Resolution: {{photo.x_resolution}} x {{photo.y_resolution}}</span>
-                <span class="span">File Type: {{photo.file_type}}</span>
               </a>  
           </div>
         </div>
