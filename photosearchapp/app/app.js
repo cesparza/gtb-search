@@ -42,7 +42,7 @@ config(['$locationProvider', function($locationProvider) {
         index: 'photos',
         type: 'photo',
         body: {
-          size: 40,
+          size: 10,
           from: (offset || 0) * 10,
           query: query
         }
