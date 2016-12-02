@@ -54,12 +54,11 @@ footer {
 }
 
 .span { 
-	background: white;
 	border-left: 6px solid #FCAF17;
 	border-bottom: 1px solid;
 	border-top: 1px solid;
 	border-right: 1px solid;
-    background-color: lightgrey;
+    background-color: white;
     margin: 1px 0;
 	width: 100%;
 	padding: 2px 10px ;  
