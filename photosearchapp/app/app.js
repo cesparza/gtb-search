@@ -38,11 +38,11 @@ config(['$locationProvider', function($locationProvider) {
           
       };
 
-      client.search({
+    client.search({
         index: 'photos',
         type: 'photo',
         body: {
-          size: 10,
+          size: 40,
           from: (offset || 0) * 10,
           query: query
         }
