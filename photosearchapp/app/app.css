@@ -54,7 +54,7 @@ footer {
 }
 
 .span { 
-	background: #273b47;
+	background: white;
 	border-left: 6px solid #FCAF17;
 	border-bottom: 1px solid;
 	border-top: 1px solid;
@@ -64,7 +64,7 @@ footer {
 	width: 100%;
 	padding: 2px 10px ;  
 	display: inline-block; 
-	color: white;
+	color: #00a3d0;
 	height: 25px;
 }
 
