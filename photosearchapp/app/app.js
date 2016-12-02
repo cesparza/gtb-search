@@ -17,7 +17,7 @@ config(['$locationProvider', function($locationProvider) {
 }])
 .factory('photoService', ['$q', 'esFactory', '$location', function($q, elasticsearch, $location) {
   var client = elasticsearch({
-    host: 'localhost:9200'
+    host: '45.55.229.227:9200'
   });
 
   /**
