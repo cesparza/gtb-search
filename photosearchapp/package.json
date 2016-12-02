@@ -21,7 +21,7 @@
     "postinstall": "bower install --allow-root",
 
     "prestart": "npm install",
-    "start": "http-server ./app -a 0.0.0.0 -p 8080 -c-1 -d 'false' &",
+    "start": "http-server ./app -a 0.0.0.0 -p 8080 -c-1 -d 'false' ./dist > /dev/null &",
 
     "pretest": "npm install",
     "test": "karma start karma.conf.js",
