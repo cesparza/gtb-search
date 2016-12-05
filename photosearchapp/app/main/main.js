@@ -16,11 +16,8 @@ controller('MainCtrl', ['photoService', '$scope', '$location',function(photos,$s
   $scope.page = 0;            // A counter to keep track of our current page
   $scope.allResultsShown = true;  // Whether or not all results have been found.
   $scope.color =[];
-  $scope.searchTerm = $location.search().q ;
-  $scope.resultsLength = 0;
-  $scope.searchTerm = "";
-
-
+  $scope.count = 0;
+//console.log("Search term "+JSON.stringify($scope.searchTerm, null, 4));
   /**
    * A fresh search. Reset the scope variables to their defaults, set
    * the q query parameter, and load more results.
@@ -28,19 +25,23 @@ controller('MainCtrl', ['photoService', '$scope', '$location',function(photos,$s
   $scope.search = function() {
     $scope.page = 0;
     $scope.photos = [];
+    $scope.count=0;
     $scope.allResultsShown = false;
     $scope.loadMore();
   };
 
-  $scope.onColorChange = function(){
+  $scope.onTextChange = function(){
     
     $scope.searchTerm = $scope.toSearch;
     $scope.search();
-    /*var color = []
+
+  }
+
+  $scope.onColorChange = function(){
+    var color = []
     color=$scope.color.replace('hsv(','').replace(')','').split(',');
     $scope.searchTerm = {h: parseInt(color[0]), s: parseInt(color[1]), v:parseInt(color[2])};
-    console.log("hola muniddd "+$scope.searchTerm);
-    $scope.search();*/
+    $scope.search();
   }
 
   /**
@@ -50,7 +51,7 @@ controller('MainCtrl', ['photoService', '$scope', '$location',function(photos,$s
    */
   $scope.loadMore = function() {
     photos.search($scope.searchTerm, $scope.page++).then(function(results) {
-    $scope.total=$scope.total+results.length;  
+      
       if (results.length !==10) {
         $scope.allResultsShown = true;
       }
@@ -58,8 +59,13 @@ controller('MainCtrl', ['photoService', '$scope', '$location',function(photos,$s
       var in_photo_index = 0;
 
       for (; in_photo_index < results.length; in_photo_index++) {
-        $scope.photos.push(results[in_photo_index]);
+       if(in_photo_index!=results.length-1){
+          $scope.photos.push(results[in_photo_index]);
+        } else{
+          $scope.count=results[in_photo_index].count;
+        }
       }
+
     });
   };
     
